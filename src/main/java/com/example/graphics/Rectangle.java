@@ -1,18 +1,21 @@
 package com.example.graphics;
 
-public class Rectangular extends Shape {
+import javafx.stage.Stage;
 
-    Shape rectangle = new Shape() {
-        @Override
-        public double computeArea() {
-            double area= height*width;
-            return area;
-        }
-        @Override
-        public double computeCircumference() {
-            double circumference= (double) 2*(height+width);
-            return circumference;
-        }
+public abstract class Rectangle extends Shape {
+    double width, height;
+    Shape rectangle = new Shape();
+
+    @Override
+    public double computeArea(double width, double height) {
+        double area = height * width;
+        return area;
+    }
+
+    @Override
+    public double computeCircumference(double width, double height) {
+        double circumference = (double) 2 * (height + width);
+        return circumference;
     }
 
     @Override
@@ -23,7 +26,7 @@ public class Rectangular extends Shape {
                 '}';
     }
 
-    public Rectangular(double x, double y, double width, double height) {
+    public void Rectangule(double x, double y) {
         super(x, y);
         this.width = width;
         this.height = height;
@@ -45,8 +48,9 @@ public class Rectangular extends Shape {
         return height;
     }
 
-    public Rectangular(double x, double y) {
+    public void Rectangle(double x, double y) {
         super(x, y);
     }
-    double width, height;
+
+    public abstract void start(Stage primaryStage);
 }

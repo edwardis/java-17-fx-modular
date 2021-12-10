@@ -1,7 +1,7 @@
 package com.example.graphics;
 
-abstract class Shape {
-    double x,y;
+abstract public class Shape {
+    protected double x,y,radius;
 
     @Override
     public String toString() {
@@ -11,10 +11,8 @@ abstract class Shape {
                 '}';
     }
 
-    public double computeArea(){
-            }
-    public double computeCircumference(){
-            }
+    abstract public double computeArea();
+    abstract public double computeCircumference();
 
 
     public Shape(double x, double y) {
