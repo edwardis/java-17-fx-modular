@@ -6,12 +6,12 @@ public class Rectangular extends Shape {
         @Override
         public double computeArea() {
             double area= height*width;
-            return super.computeArea(area);
+            return area;
         }
         @Override
         public double computeCircumference() {
-            double circumference= 2*(height+width);
-            return super.computeArea(circumference);
+            double circumference= (double) 2*(height+width);
+            return circumference;
         }
     }
 
